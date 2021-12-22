@@ -1,6 +1,7 @@
 export {TPlanBuilder};
 
 
+
 class TPlanBuilder {
   constructor(tplanconfig){
     this.tplanconfig = tplanconfig;
@@ -59,8 +60,17 @@ class TPlanBuilder {
    * @param {*} tpnode 
    * @returns список комбинаций значений аспекта в виде усечённых объектов aspectgroup
    */
-  combinevalues(tpnode) {
+  combinevalues(tpnode, maxtuplesize = 1) {
     var result = [];
+
+    // извлекаем список идентификаторов значений аспекта
+    var aspectValuesIds = [tpnode.values.length];
+    for (const value in tpnode.values) {
+      aspectValuesIds.push(value.id)
+    }
+
+
+
 
 
     return result;
