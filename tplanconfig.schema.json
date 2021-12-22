@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://msr.com/schemas/tplan/tplanconfig",
+  "type":"object",
+  "description": "первый уровень дерева комбинаций",
+  "properties": {
+    "start": {"$ref":"#/$defs/tpnode"}
+  },
+
+
+  "$defs": {
+    "tpnode":{
+      "description":"Типовой узел аспектов, требующих тестирования",
+      "type":"object",
+      "properties":  {
+        "aspectgroup": {"$ref":"#/$defs/aspectgroup"}
+      },
+      "required": ["aspectgroup"]
+    },
+    "aspectgroup": {
+      "description": "группа значений аспекта (собственно аспект)",
+      "type": "object",
+      "properties": {
+        "name": {"type": "string", "description":"название группы (аспекта)" },
+        "values":{
+          "type": "array",
+          "items": {"$ref":"#/$defs/aspectitem"}
+        },
+        "restrictions": {
+          "type": "array",
+          "items": {"$ref":"#/$defs/aspectrestriction"}
+        },
+        "subnodes": {
+          "description": "дочерние узлы",
+          "items":{"$ref":"#/$defs/tpnode"}
+        }
+      },
+      "required":["name","values"]
+    },
+    "aspectitem": {
+      "description": "одно из значений аспекта",
+      "type":"object",
+      "properties": {
+        "id": {"type": "integer", "description":"идентификатор аспекта в группе" },
+        "name": {"type": "string", "description":"название значения" }
+      },
+      "required":["id","name"]
+    },
+    "aspectrestriction": {
+      "description": "ограничение в использовании аспекта в плане (пока заглушка)",
+      "type":"object"
+    }
+  }
+}
