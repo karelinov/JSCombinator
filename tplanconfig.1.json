@@ -4,17 +4,26 @@
     "aspectgroup": {
       "name": "group1",
       "values": [
-        {"id": 1, "name": "item1"},
-        {"id": 2, "name": "item2"},
-        {"id": 3, "name": "item3"}
+        {"id": 1, "name": "item1_1"},
+        {"id": 2, "name": "item1_2"},
+        {"id": 3, "name": "item1_3"}
       ],
       "subnodes": [
         {
           "aspectgroup": {
             "name": "group21",
             "values": [
-              {"id": 1, "name": "item1"},
-              {"id": 2, "name": "item2"}
+              {"id": 1, "name": "item21_1"},
+              {"id": 2, "name": "item21_2"}
+            ]
+          }
+        },
+        {
+          "aspectgroup": {
+            "name": "group22",
+            "values": [
+              {"id": 1, "name": "item22_1"},
+              {"id": 2, "name": "item22_2"}
             ]
           }
         }
