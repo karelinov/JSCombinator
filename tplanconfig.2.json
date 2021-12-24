@@ -1,0 +1,41 @@
+[ 
+  {
+    "order": 1,
+    "aspectgroup": {
+      "id": "0",
+      "name": "group1",
+      "values": [
+        {"id": 1, "name": "item1_1"},
+        {"id": 2, "name": "item1_2"},
+        {"id": 3, "name": "item1_3"}
+      ],
+      "restrictions":[]
+    }
+  },
+  {
+    "order":2,
+    "aspectgroup": {
+      "id": "1",
+      "name": "group2",
+      "values": [
+        {"id": 1, "name": "item2_1"},
+        {"id": 2, "name": "item2_2"}
+      ],
+      "restrictions":[]
+    }
+  },
+  {
+    "order":3,
+    "aspectgroup": {
+      "id": "2",
+      "name": "group3",
+      "values": [
+        {"id": 1, "name": "item3_1"},
+        {"id": 2, "name": "item3_2"},
+        {"id": 3, "name": "item3_3"}
+      ],
+      "restrictions":[]
+    }
+  }
+]
+

@@ -12,7 +12,8 @@ import * as fs from 'fs';
 var tplanConfig = JSON.parse(fs.readFileSync('./tplanconfig.1.json','utf-8'));
 var tplanBuilder = new tpb_module.TPlanBuilder(tplanConfig)
 var plan = tplanBuilder.buildplan();
+plan = tplanBuilder.tabularize(plan);
 
 
-console.log(plan);
+console.table(plan);
 

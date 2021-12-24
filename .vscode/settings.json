@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+        "fileMatch": ["/*tplanconfig.*.json"], 
+        "url": "./tplanconfig.schema.json"
+    }
+  ]  
+}

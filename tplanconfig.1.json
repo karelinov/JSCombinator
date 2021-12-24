@@ -1,33 +1,31 @@
-{
-  "$schema": "./tplanconfig.schema.json",
-  "start": {
+[ 
+  {
+    "id": 1,
     "aspectgroup": {
-      "name": "group1",
+      "id": "1",
+      "name": "Лица в сообщении",
       "values": [
-        {"id": 1, "name": "item1_1"},
-        {"id": 2, "name": "item1_2"},
-        {"id": 3, "name": "item1_3"}
+        {"id": 1, "name": "Ребёнок"},
+        {"id": 2, "name": "Мать"},
+        {"id": 3, "name": "Отец"}
       ],
-      "subnodes": [
-        {
-          "aspectgroup": {
-            "name": "group21",
-            "values": [
-              {"id": 1, "name": "item21_1"},
-              {"id": 2, "name": "item21_2"}
-            ]
-          }
-        },
-        {
-          "aspectgroup": {
-            "name": "group22",
-            "values": [
-              {"id": 1, "name": "item22_1"},
-              {"id": 2, "name": "item22_2"}
-            ]
-          }
-        }
+      "restrictions":[
+        {"type": "exclude", "scope": "local", "rule":["(2,3)"]}
+      ]
+    }
+  },
+  {
+    "id":2,
+    "aspectgroup": {
+      "id": "2",
+      "name": "Полнота данных лица",
+      "values": [
+        {"id": 1, "name": "Полное"},
+        {"id": 2, "name": "Неполное"}
+      ],
+      "restrictions":[
       ]
     }
   }
-}
+]
+
